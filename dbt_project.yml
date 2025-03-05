@@ -34,3 +34,5 @@ models:
       +materialized: view
     marts:
       +materialized: table
+    adi-training:
+      +materialized: view
