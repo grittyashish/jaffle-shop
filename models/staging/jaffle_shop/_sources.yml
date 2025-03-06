@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: A replica of postgres db
+    database: raw  
+    schema: jaffle_shop  
+    tables:
+      - name: orders
+        identifier: orders
+      - name: customers
+        identifier: customers
+        description: one record per customer
+        columns:
+          - name: id #column name is id in the source table : raw.jaffle_shop.customers
+            data_tests:
+              - not_null
+              - unique

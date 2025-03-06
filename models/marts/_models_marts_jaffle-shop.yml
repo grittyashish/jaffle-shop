@@ -1,0 +1,8 @@
+models:
+  - name: dim_customers
+    description: Generic tests
+    columns:
+      - name: customer_id
+        data_tests:
+          - not_null
+          - unique
