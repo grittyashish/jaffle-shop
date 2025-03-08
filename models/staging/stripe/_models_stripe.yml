@@ -1,0 +1,7 @@
+models:
+  - name: stg_stripe__payment
+    description: stripe payments
+    columns:
+      - name : amount
+        data_tests:
+          - greater_than_five

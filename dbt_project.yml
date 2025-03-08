@@ -11,7 +11,7 @@ profile: default # Put your profile here
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
-test-paths: ["data-tests"]
+test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
@@ -30,9 +30,8 @@ seeds:
 
 models:
   jaffle_shop:
-    staging:
-      +materialized: view
-    marts:
-      +materialized: table
-    adi-training:
-      +materialized: view
+    +materialized: table
+
+tests:
+  jaffle_shop:
+    +severity: warn
